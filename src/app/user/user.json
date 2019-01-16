@@ -1,0 +1,17 @@
+{
+    "users": [
+      { 
+        "username": "admin",
+        "password": "test"
+      },
+      {
+        "username": "mod",
+        "password": "test"
+      },
+     {
+        "username": "user",
+        "password": "test"
+      }
+    ]
+   }
+  

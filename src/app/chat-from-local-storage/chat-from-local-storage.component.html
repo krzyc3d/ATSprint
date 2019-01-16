@@ -1,0 +1,9 @@
+<div *ngFor= "let chat of localStorageChatService.getChats()">
+  
+  <app-chat-item [chat]="chat"></app-chat-item>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="chatName" value= {{chatName}}>
+  <button (click)="addChat()">add Chat</button>
+</div>

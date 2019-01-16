@@ -1,0 +1,12 @@
+
+  <h1  >Welcome to {{title}}</h1>
+<mat-nav-list>
+  <mat-list-item *ngFor = "let chat of chatList"    
+    [class.selected]="chat === selectedChat"
+    (click)="onSelect(chat)">
+<a routerLink="/chat/{{chat.id}}"> {{chat.name}}</a>
+  </mat-list-item>
+</mat-nav-list>
+
+<!-- <button (click)="getLocalStorage()"></button> -->
+<app-chat-detail [chat]="selectedChat"></app-chat-detail>

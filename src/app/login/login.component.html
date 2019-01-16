@@ -1,0 +1,27 @@
+<app-user></app-user>
+
+
+<div class="example-container">
+ <form [formGroup]="loginForm"(ngSubmit)="onSubmit(signinForm)" #signinForm="ngForm" >
+  <mat-form-field >
+    <input matInput placeholder="Login" id="username" formControlName= "username" 
+    [(ngModel)]="userModel.username" required>
+    <!-- #name="ngModel" [(ngModel)]="input.name" name="name" required -->
+    <!-- <div *ngIf="name.errors && (name.dirty || email.touched)"> -->
+      <!-- <p *ngIf="name.errors.required">*name required</p> -->
+    <!-- </div> -->
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" id="password" 
+    formControlName= "password"  [(ngModel)]= "userModel.password"  required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}} 
+      </mat-icon>
+      <!-- [(ngModel)]="input.password" #password="ngModel" name="password" required minlength="5" -->
+  </mat-form-field>
+  <br>
+  <button mat-button type="submit"   routeLink>Submit</button>
+ 
+</form>
+</div>
